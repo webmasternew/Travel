@@ -1,0 +1,58 @@
+@import "variables";
+@import "mixins";
+
+.page-nav {
+  border-bottom: 1px solid $font-color-gray;
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+
+  color: $font-color-gray;
+  z-index: 2;
+
+  @media(max-width: 768px) {
+    position: relative;
+  }
+
+  }
+
+
+.logo {
+  height: 70px;
+
+    img:first-child {
+      margin-right: 8px;
+      margin-bottom: 3px;
+    }
+  }
+
+
+.page-nav__enter-link {
+  display: block;
+  width: 30px;
+  height: 30px;
+
+  background: url("../img/user__enter.svg") no-repeat center;
+  background-size: 20px 15px;
+  border: 1px solid rgba(255,255,255,255.2);
+  border-radius: 3px;
+}
+
+.main-nav {
+  list-style: none;
+  padding: 0 $content-padding;
+  margin-bottom: 0;
+
+    &__item {
+      margin-right: 30px;
+      font-size: 18px;
+      line-height: 70px;
+      text-align: center;
+      &--active {
+        border-top: 3px solid transparent;
+        border-bottom:3px solid $font-color-gray;
+      }
+    }
+
+}

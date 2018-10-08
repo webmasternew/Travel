@@ -1,0 +1,64 @@
+@import "mixins";
+
+.travel-menu {
+  @include resetDefaultStylesList;
+  &__container {
+    background: #f3f1ed;
+  }
+}
+
+.travel-menu__item {
+  height: 120px;
+  text-align: center;
+  background-size: 35px;
+  background-position: center 30px;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+
+  a {
+    padding-top: 85px;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+
+  &:hover,
+  &--active
+  {
+    background-color: white;
+  }
+
+  &--beach {
+    background-image: url("../img/travel-menu/icon-umbrella.svg");
+  }
+
+  &--city {
+    background-image: url("../img/travel-menu/icon-house.svg");
+  }
+
+  &--shopping {
+    background-image: url("../img/travel-menu/icon-bag.svg");
+  }
+
+  &--diving {
+    background-image: url("../img/travel-menu/icon-mask.svg");
+  }
+
+  &--ski{
+    background-image: url("../img/travel-menu/icon-ski.svg");
+  }
+
+  &--exotic {
+    background-image: url("../img/travel-menu/icon-racovina.svg");
+  }
+
+  &--party {
+    background-image: url("../img/travel-menu/icon-drink.svg");
+  }
+
+  &--interesting {
+    background-position: center;
+    background-image: url("../img/travel-menu/icon-pyramid.svg");
+  }
+}

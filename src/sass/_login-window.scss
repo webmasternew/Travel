@@ -1,0 +1,124 @@
+$form-lateral-padding: 20px;
+$background: linear-gradient(to bottom, #e6eeff, #dde8ff);
+
+.login-window {
+  display: none;
+  z-index: 11;
+  position: fixed;
+  top: 360px;
+  left: 0;
+  right: 0;
+  margin-right: auto;
+  margin-left: auto;
+  width: 300px;
+  min-height: 230px;
+  padding: 60px 20px 0;
+  font-size: 15px;
+  line-height: 32px;
+  background: $background;
+
+  &__yandex-logo {
+    position: absolute;
+    top: -25px;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 42px;
+    height: 71px;
+    background-image: url("../img/login-menu/domik_logo_ru.svg");
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: transparent url(../img/login-menu/domik-roof.svg);
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding-left: 10px;
+    margin-bottom: 10px;
+  }
+
+  .checkbox-label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 10px;
+
+    input[type="checkbox"] {
+      opacity: 0;
+
+      &:checked ~ .checkbox-text::before {
+        background-color: #ffeba0;
+      }
+
+      &:checked ~ .checkbox-text::after {
+        opacity: 1;
+        transform: translateY(7px);
+      }
+    }
+
+  }
+
+  .checkbox-text {
+    &::before {
+      content: "";
+      position: absolute;
+      left: 3px;
+      top: 50%;
+      transform: translateY(-50%);
+      bottom: 0;
+      width: 15px;
+      height: 15px;
+      border: 1px solid rgba(153,122,0,.5);
+      border-radius: 3px;
+      background-color: white;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: -5px;
+      width: 18px;
+      height: 18px;
+      background-image: url("../img/checkbox__tick.svg");
+      opacity: 0;
+      transition: opacity .3s ease-in-out,
+                  transform .1s ease-in-out
+    ;
+    }
+  }
+
+  &__submit-button {
+    width: 70px;
+    float: right;
+  }
+
+  &__box {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    min-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px $form-lateral-padding 10px;
+    border-top: solid 1px rgba(0,0,0,.2);
+    background: $background;
+
+    .button {
+      line-height: 28px;
+      font-size: 13px;
+
+      &:last-child {
+        font-weight: bold;
+      }
+    }
+  }
+
+}

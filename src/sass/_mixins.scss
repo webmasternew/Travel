@@ -1,0 +1,20 @@
+
+@mixin resetDefaultStylesLink() {
+  color: inherit!important;
+  text-decoration: none!important;
+  &:hover {
+    text-decoration: none!important;
+    color: inherit!important;
+  }
+}
+
+@mixin  resetDefaultStylesTextBlock() {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin resetDefaultStylesList() {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

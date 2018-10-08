@@ -1,0 +1,25 @@
+@import "variables";
+@import "mixins";
+
+.page-footer {
+  background-color: $gray-background;
+  padding: 25px 0 50px;
+}
+
+.page-footer__list {
+  @include resetDefaultStylesList;
+  padding-left: 20px;
+  list-style: none;
+}
+
+.page-footer__item {
+  color: #8792a8;
+  margin-bottom: 10px;
+}
+
+.page-footer__heading {
+  text-transform: uppercase;
+  color: #0e0e0e;
+  font-size: 13px;
+  margin-bottom: 10px;
+}

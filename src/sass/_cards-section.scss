@@ -1,0 +1,13 @@
+@import "variables";
+
+.cards-section__list {
+  margin-bottom: 0;
+  list-style: none;
+  padding-left: 0;
+  background-color: gray;
+}
+
+.cards-section__card-wrapper {
+  height: $card-size * 2;
+  overflow: hidden;
+}
