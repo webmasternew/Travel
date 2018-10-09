@@ -121,42 +121,38 @@ $background: linear-gradient(to bottom, #e6eeff, #dde8ff);
       }
     }
   }
-
-  &__social-list {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
 }
 
 .social-list {
   @include resetDefaultStylesList;
-
-  a {
-    color: transparent;
-  }
+  text-align: center;
 
   &__item {
+    display: inline-block;
     width: 24px;
     height: 24px;
     background-position: center;
     background-repeat: no-repeat;
+    cursor: pointer;
+    a {
+      color: transparent!important;
+    }
 
-    &__vk {
+    &--vk {
       background-image: url("../img/login-menu/social-list/auth__social-icon_code_vk.svg");
       &:hover {
         background-image: url("../img/login-menu/social-list/auth__social-icon_code_vk-hover.svg");
       }
     }
 
-    &__fb {
+    &--fb {
       background-image: url("../img/login-menu/social-list/auth__social-icon_code_fb.svg");
       &:hover {
         background-image: url("../img/login-menu/social-list/auth__social-icon_code_fb-hover.svg");
       }
     }
 
-    &__fb {
+    &--tw {
       background-image: url("../img/login-menu/social-list/auth__social-icon_code_tw.svg");
       &:hover {
         background-image: url("../img/login-menu/social-list/auth__social-icon_code_tw-hover.svg");
