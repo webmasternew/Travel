@@ -37,32 +37,32 @@
         </div>
         <nav class="page-nav">
             <div class="container">
-                <div class="row justify-content-md-between justify-content-center align-items-center flex-md-row flex-column no-gutters">
-                    <div class="logo col-auto d-flex align-items-center">
+                <div class="row no-gutters justify-content-lg-between justify-content-center align-items-center">
+                    <div class="logo col-auto d-flex align-items-center justify-content-center order-first">
                         <a class="logo__link" href="https://yandex.by">
                             <img src="img/logo-yandex.svg" width="70" height="30" alt="yandex logo">
                         </a>
                         <img src="img/logo-travel.svg" width="125" height="30" alt="yandex logo">
 
                     </div>
-                    <ul class="main-nav col-md-auto d-flex flex-column flex-lg-row align-items-center">
-                        <li class="main-nav__item">
+                    <ul class="main-nav col-sm-auto col-lg justify-content-center row no-gutters order-last order-md-2">
+                        <li class="main-nav__item col-auto">
                             <a href="#">Авиабилеты</a>
                         </li>
-                        <li class="main-nav__item">
+                        <li class="main-nav__item col-auto">
                             <a href="#">Ж\д билеты</a>
                         </li>
-                        <li class="main-nav__item">
+                        <li class="main-nav__item col-auto">
                             <a href="#">Туры</a>
                         </li>
-                        <li class="main-nav__item main-nav__item--active">
+                        <li class="main-nav__item main-nav__item--active col-auto">
                             <a href="#">Отели</a>
                         </li>
-                        <li class="main-nav__item">
+                        <li class="main-nav__item col-auto">
                             <a href="#">Автобусы</a>
                         </li>
                     </ul>
-                    <div class="col-auto align-self-center user-nav">
+                    <div class="user-nav col-auto order-lg-last">
                         <a href="#" class="page-nav__enter-link"></a>
                     </div>
                 </div>
@@ -88,14 +88,12 @@
         </article>
 
 
-
-
         <nav class="main-navbar container">
             <form method="post" class="main-navbar__form">
-                <div class="main-navbar__travel-direction">
+                <div class="main-navbar__travel-direction main-navbar__field">
                     <input type="search" title="Направление" placeholder="Куда: страна, курорт или отель">
                 </div>
-                <div class="main-navbar__dropdown" id="dropdown-one">
+                <div class="main-navbar__dropdown main-navbar__field" id="dropdown-one">
                     <div class="main-navbar__dropdown-content dropdown-range">
                         <div class="dropdown-range__box">
                             <button class="dropdown-range__button dropdown-range__button--left">-</button>
@@ -107,7 +105,7 @@
                     <div class="main-navbar__icon main-navbar__icon--arrow"></div>
 
                 </div>
-                <div class="main-navbar__dropdown" id="dropdown-two">
+                <div class="main-navbar__dropdown main-navbar__field" id="dropdown-two">
                     <div class="main-navbar__dropdown-content dropdown-range">
                         <div class="dropdown-range__box">
                             <button class="dropdown-range__button dropdown-range__button--left">-</button>
@@ -118,29 +116,28 @@
                     <input type="text" class="main-navbar__dropdown-field" value="19 октября" readonly>
                     <div class="main-navbar__icon main-navbar__icon--arrow"></div>
                 </div>
-                <div class="main-navbar__dropdown" id="dropdown-three">
+                <div class="main-navbar__dropdown main-navbar__field" id="dropdown-three">
                     <div class="main-navbar__dropdown-content">Hello World!</div>
                     <input type="text" class="main-navbar__dropdown-field" value="5 ночей" readonly>
                     <div class="main-navbar__icon main-navbar__icon--grid"></div>
                 </div>
-                <div class="main-navbar__travel-city"><input type="search" title="Направление" placeholder="Откуда"></div>
+                <div class="main-navbar__travel-city main-navbar__field"><input type="search" title="Направление" placeholder="Откуда"></div>
                 <button type="submit" class="button main-navbar__submit-button">Найти</button>
-
             </form>
         </nav>
 
 
         <div class="travel-menu__container container-fluid">
             <div class="container">
-                <ul class="travel-menu row">
-                    <li class="travel-menu__item travel-menu__item--beach col-sm"><a href="#">Море и пляж</a></li>
-                    <li class="travel-menu__item travel-menu__item--active travel-menu__item--city col-sm"><a href="#">Города мира</a></li>
-                    <li class="travel-menu__item travel-menu__item--shopping col-sm"><a href="#">Шопинг</a></li>
-                    <li class="travel-menu__item travel-menu__item--diving col-sm"><a href="#">Дайвинг</a></li>
-                    <li class="travel-menu__item travel-menu__item--ski col-sm"><a href="#">Горные лыжи</a></li>
-                    <li class="travel-menu__item travel-menu__item--exotic col-sm"><a href="#">Экзотика</a></li>
-                    <li class="travel-menu__item travel-menu__item--party col-sm"><a href="#">Вечеринка</a></li>
-                    <li class="travel-menu__item travel-menu__item--interesting col-sm"><a href="#">Интересные места</a></li>
+                <ul class="travel-menu row no-gutters">
+                    <li class="travel-menu__item travel-menu__item--beach col col-4 col-md"><a href="#">Море и пляж</a></li>
+                    <li class="travel-menu__item travel-menu__item--active travel-menu__item--city col-4 col-md"><a href="#">Города мира</a></li>
+                    <li class="travel-menu__item travel-menu__item--shopping  col-4 col-md"><a href="#">Шопинг</a></li>
+                    <li class="travel-menu__item travel-menu__item--diving  col-4 col-md"><a href="#">Дайвинг</a></li>
+                    <li class="travel-menu__item travel-menu__item--ski  col-4 col-md"><a href="#">Горные лыжи</a></li>
+                    <li class="travel-menu__item travel-menu__item--exotic  col-4 col-md"><a href="#">Экзотика</a></li>
+                    <li class="travel-menu__item travel-menu__item--party  col-4 col-md"><a href="#">Вечеринка</a></li>
+                    <li class="travel-menu__item travel-menu__item--interesting  col-4 col-md"><a href="#">Интересные места</a></li>
                 </ul>
             </div>
         </div>

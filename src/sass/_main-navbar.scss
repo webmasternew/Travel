@@ -1,5 +1,4 @@
-//отступ 11px
-//высота 11 и 19
+@import "../bootstrap/scss/variables";
 
 @import "mixins";
 @import "variables";
@@ -18,8 +17,13 @@ $height-content:42px;
     line-height: $height-content;
     height: $height-content;
 
-    @media(max-width: 768px) {
+    @media(max-width: map_get($grid-breakpoints,"lg")) {
+      display: none;
       position: relative;
+      top: 0;
+      &__form {
+        flex-direction: column;
+      }
     }
 
   &__dropdown-content {
