@@ -24,6 +24,11 @@
                     <span class="checkbox-text">Чужой компьютер</span>
                 </label>
                 <input class="login-window__submit-button button" type="submit" value="Войти">
+                <ul class="social-list login-window__social-list">
+                    <li class="social-list__item social-list__item--vk">Vkontakte<a href="#"></a></li>
+                    <li class="social-list__item social-list__item-fb">Facebook<a href="#"></a></li>
+                    <li class="social-list__item social-list__item--tw">Twitter<a href="#"></a></li>
+                </ul>
                 <div class="login-window__box">
                     <div class="button button--transparent"><a href="#">Вспомнить пароль</a></div>
                     <div class="button button--transparent"><a href="#">Регистрация</a></div>
@@ -65,28 +70,26 @@
         </nav>
 
         <article class="travel-card">
-            <a href="#">
-                <div class="travel-card__info-text">
-                    <a href="#">
-                        <span class="travel-card__country-name">Таиланд</span>
-                        <h2 class="travel-card__name">Пхукет</h2>
-                        <span class="travel-card__nights-count">7 ночей, на двоих</span>
-                    </a>
-                    <a href="#">
-                        <div class="travel-card__prices">
-                            <span class="travel-card__number">от 100 466 ₽</span>
-                            <span class="travel-card__include-text">отель + перелёт</span>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="travel-card__prices">
-                            <span class="travel-card__number">от 100 466 ₽</span>
-                            <span class="travel-card__include-text">тур</span>
-                        </div>
-                    </a>
-                </div>
-                <img class="travel-card__image" src="img/header-background.jpg">
-            </a>
+            <div class="travel-card__info-text">
+                <a href="#">
+                    <span class="travel-card__country-name">Таиланд</span>
+                    <h2 class="travel-card__name">Пхукет</h2>
+                    <span class="travel-card__nights-count">7 ночей, на двоих</span>
+                </a>
+                <a href="#">
+                    <div class="travel-card__prices">
+                        <span class="travel-card__number">от 100 466 ₽</span>
+                        <span class="travel-card__include-text">отель + перелёт</span>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="travel-card__prices">
+                        <span class="travel-card__number">от 100 466 ₽</span>
+                        <span class="travel-card__include-text">тур</span>
+                    </div>
+                </a>
+            </div>
+            <img class="travel-card__image" src="img/header-background.jpg">
         </article>
 
 
@@ -109,7 +112,13 @@
 
                 </div>
                 <div class="main-navbar__dropdown" id="dropdown-two">
-                    <div class="main-navbar__dropdown-content">Hello World!</div>
+                    <div class="main-navbar__dropdown-content dropdown-range">
+                        <div class="dropdown-range__box">
+                            <button class="dropdown-range__button dropdown-range__button--left">-</button>
+                            <span class="dropdown-range__field">Два взрослых</span>
+                            <button class="dropdown-range__button dropdown-range__button--right">+</button>
+                        </div>
+                    </div>
                     <input type="text" class="main-navbar__dropdown-field" value="19 октября" readonly>
                     <div class="main-navbar__icon main-navbar__icon--arrow"></div>
                 </div>
@@ -149,106 +158,98 @@
                 <li class="cards-section__card-wrapper col-lg-6 row no-gutters">
                     <div class="col-sm-6 h-50">
                         <article class="travel-card">
-                            <a href="#">
-                                <div class="travel-card__info-text">
-                                    <a href="#">
-                                        <span class="travel-card__country-name">Таиланд</span>
-                                        <h2 class="travel-card__name">Пхукет</h2>
-                                        <span class="travel-card__nights-count">7 ночей, на двоих</span>
-                                    </a>
-                                    <a href="#">
-                                        <div class="travel-card__prices">
-                                            <span class="travel-card__number">от 100 466 ₽</span>
-                                            <span class="travel-card__include-text">отель + перелёт</span>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="travel-card__prices">
-                                            <span class="travel-card__number">от 100 466 ₽</span>
-                                            <span class="travel-card__include-text">тур</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <img class="travel-card__image" src="img/header-background.jpg">
-                            </a>
+                            <div class="travel-card__info-text">
+                                <a href="#">
+                                    <span class="travel-card__country-name">Таиланд</span>
+                                    <h2 class="travel-card__name">Пхукет</h2>
+                                    <span class="travel-card__nights-count">7 ночей, на двоих</span>
+                                </a>
+                                <a href="#">
+                                    <div class="travel-card__prices">
+                                        <span class="travel-card__number">от 100 466 ₽</span>
+                                        <span class="travel-card__include-text">отель + перелёт</span>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="travel-card__prices">
+                                        <span class="travel-card__number">от 100 466 ₽</span>
+                                        <span class="travel-card__include-text">тур</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <img class="travel-card__image" src="img/header-background.jpg">
                         </article>
                     </div>
                     <div class="col-sm-6 h-50">
                         <article class="travel-card">
-                            <a href="#">
-                                <div class="travel-card__info-text">
-                                    <a href="#">
-                                        <span class="travel-card__country-name">Таиланд</span>
-                                        <h2 class="travel-card__name">Пхукет</h2>
-                                        <span class="travel-card__nights-count">7 ночей, на двоих</span>
-                                    </a>
-                                    <a href="#">
-                                        <div class="travel-card__prices">
-                                            <span class="travel-card__number">от 100 466 ₽</span>
-                                            <span class="travel-card__include-text">отель + перелёт</span>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="travel-card__prices">
-                                            <span class="travel-card__number">от 100 466 ₽</span>
-                                            <span class="travel-card__include-text">тур</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <img class="travel-card__image" src="img/header-background.jpg">
-                            </a>
+                            <div class="travel-card__info-text">
+                                <a href="#">
+                                    <span class="travel-card__country-name">Таиланд</span>
+                                    <h2 class="travel-card__name">Пхукет</h2>
+                                    <span class="travel-card__nights-count">7 ночей, на двоих</span>
+                                </a>
+                                <a href="#">
+                                    <div class="travel-card__prices">
+                                        <span class="travel-card__number">от 100 466 ₽</span>
+                                        <span class="travel-card__include-text">отель + перелёт</span>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="travel-card__prices">
+                                        <span class="travel-card__number">от 100 466 ₽</span>
+                                        <span class="travel-card__include-text">тур</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <img class="travel-card__image" src="img/header-background.jpg">
                         </article>
                     </div>
                     <div class="col-sm-6 h-50">
                         <article class="travel-card">
-                            <a href="#">
-                                <div class="travel-card__info-text">
-                                    <a href="#">
-                                        <span class="travel-card__country-name">Таиланд</span>
-                                        <h2 class="travel-card__name">Пхукет</h2>
-                                        <span class="travel-card__nights-count">7 ночей, на двоих</span>
-                                    </a>
-                                    <a href="#">
-                                        <div class="travel-card__prices">
-                                            <span class="travel-card__number">от 100 466 ₽</span>
-                                            <span class="travel-card__include-text">отель + перелёт</span>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="travel-card__prices">
-                                            <span class="travel-card__number">от 100 466 ₽</span>
-                                            <span class="travel-card__include-text">тур</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <img class="travel-card__image" src="img/header-background.jpg">
-                            </a>
+                            <div class="travel-card__info-text">
+                                <a href="#">
+                                    <span class="travel-card__country-name">Таиланд</span>
+                                    <h2 class="travel-card__name">Пхукет</h2>
+                                    <span class="travel-card__nights-count">7 ночей, на двоих</span>
+                                </a>
+                                <a href="#">
+                                    <div class="travel-card__prices">
+                                        <span class="travel-card__number">от 100 466 ₽</span>
+                                        <span class="travel-card__include-text">отель + перелёт</span>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="travel-card__prices">
+                                        <span class="travel-card__number">от 100 466 ₽</span>
+                                        <span class="travel-card__include-text">тур</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <img class="travel-card__image" src="img/header-background.jpg">
                         </article>
                     </div>
                     <div class="col-sm-6 h-50">
                         <article class="travel-card">
-                            <a href="#">
-                                <div class="travel-card__info-text">
-                                    <a href="#">
-                                        <span class="travel-card__country-name">Таиланд</span>
-                                        <h2 class="travel-card__name">Пхукет</h2>
-                                        <span class="travel-card__nights-count">7 ночей, на двоих</span>
-                                    </a>
-                                    <a href="#">
-                                        <div class="travel-card__prices">
-                                            <span class="travel-card__number">от 100 466 ₽</span>
-                                            <span class="travel-card__include-text">отель + перелёт</span>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="travel-card__prices">
-                                            <span class="travel-card__number">от 100 466 ₽</span>
-                                            <span class="travel-card__include-text">тур</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <img class="travel-card__image" src="img/header-background.jpg">
-                            </a>
+                            <div class="travel-card__info-text">
+                                <a href="#">
+                                    <span class="travel-card__country-name">Таиланд</span>
+                                    <h2 class="travel-card__name">Пхукет</h2>
+                                    <span class="travel-card__nights-count">7 ночей, на двоих</span>
+                                </a>
+                                <a href="#">
+                                    <div class="travel-card__prices">
+                                        <span class="travel-card__number">от 100 466 ₽</span>
+                                        <span class="travel-card__include-text">отель + перелёт</span>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="travel-card__prices">
+                                        <span class="travel-card__number">от 100 466 ₽</span>
+                                        <span class="travel-card__include-text">тур</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <img class="travel-card__image" src="img/header-background.jpg">
                         </article>
                     </div>
                 </li>
@@ -256,81 +257,75 @@
                 <li class="cards-section__card-wrapper col-lg-6 row no-gutters">
                     <div class="col-sm-6 h-50">
                         <article class="travel-card">
-                            <a href="#">
-                                <div class="travel-card__info-text">
-                                    <a href="#">
-                                        <span class="travel-card__country-name">Таиланд</span>
-                                        <h2 class="travel-card__name">Пхукет</h2>
-                                        <span class="travel-card__nights-count">7 ночей, на двоих</span>
-                                    </a>
-                                    <a href="#">
-                                        <div class="travel-card__prices">
-                                            <span class="travel-card__number">от 100 466 ₽</span>
-                                            <span class="travel-card__include-text">отель + перелёт</span>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="travel-card__prices">
-                                            <span class="travel-card__number">от 100 466 ₽</span>
-                                            <span class="travel-card__include-text">тур</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <img class="travel-card__image" src="img/header-background.jpg">
-                            </a>
+                            <div class="travel-card__info-text">
+                                <a href="#">
+                                    <span class="travel-card__country-name">Таиланд</span>
+                                    <h2 class="travel-card__name">Пхукет</h2>
+                                    <span class="travel-card__nights-count">7 ночей, на двоих</span>
+                                </a>
+                                <a href="#">
+                                    <div class="travel-card__prices">
+                                        <span class="travel-card__number">от 100 466 ₽</span>
+                                        <span class="travel-card__include-text">отель + перелёт</span>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="travel-card__prices">
+                                        <span class="travel-card__number">от 100 466 ₽</span>
+                                        <span class="travel-card__include-text">тур</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <img class="travel-card__image" src="img/header-background.jpg">
                         </article>
                     </div>
                     <div class="col-sm-6 h-50">
                         <article class="travel-card">
-                            <a href="#">
-                                <div class="travel-card__info-text">
-                                    <a href="#">
-                                        <span class="travel-card__country-name">Таиланд</span>
-                                        <h2 class="travel-card__name">Пхукет</h2>
-                                        <span class="travel-card__nights-count">7 ночей, на двоих</span>
-                                    </a>
-                                    <a href="#">
-                                        <div class="travel-card__prices">
-                                            <span class="travel-card__number">от 100 466 ₽</span>
-                                            <span class="travel-card__include-text">отель + перелёт</span>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="travel-card__prices">
-                                            <span class="travel-card__number">от 100 466 ₽</span>
-                                            <span class="travel-card__include-text">тур</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <img class="travel-card__image" src="img/header-background.jpg">
-                            </a>
+                            <div class="travel-card__info-text">
+                                <a href="#">
+                                    <span class="travel-card__country-name">Таиланд</span>
+                                    <h2 class="travel-card__name">Пхукет</h2>
+                                    <span class="travel-card__nights-count">7 ночей, на двоих</span>
+                                </a>
+                                <a href="#">
+                                    <div class="travel-card__prices">
+                                        <span class="travel-card__number">от 100 466 ₽</span>
+                                        <span class="travel-card__include-text">отель + перелёт</span>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="travel-card__prices">
+                                        <span class="travel-card__number">от 100 466 ₽</span>
+                                        <span class="travel-card__include-text">тур</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <img class="travel-card__image" src="img/header-background.jpg">
                         </article>
                     </div>
 
                     <div class="col-sm-12 h-50">
                         <article class="travel-card">
-                            <a href="#">
-                                <div class="travel-card__info-text">
-                                    <a href="#">
-                                        <span class="travel-card__country-name">Таиланд</span>
-                                        <h2 class="travel-card__name">Пхукет</h2>
-                                        <span class="travel-card__nights-count">7 ночей, на двоих</span>
-                                    </a>
-                                    <a href="#">
-                                        <div class="travel-card__prices">
-                                            <span class="travel-card__number">от 100 466 ₽</span>
-                                            <span class="travel-card__include-text">отель + перелёт</span>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="travel-card__prices">
-                                            <span class="travel-card__number">от 100 466 ₽</span>
-                                            <span class="travel-card__include-text">тур</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <img class="travel-card__image" src="img/header-background.jpg">
-                            </a>
+                            <div class="travel-card__info-text">
+                                <a href="#">
+                                    <span class="travel-card__country-name">Таиланд</span>
+                                    <h2 class="travel-card__name">Пхукет</h2>
+                                    <span class="travel-card__nights-count">7 ночей, на двоих</span>
+                                </a>
+                                <a href="#">
+                                    <div class="travel-card__prices">
+                                        <span class="travel-card__number">от 100 466 ₽</span>
+                                        <span class="travel-card__include-text">отель + перелёт</span>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="travel-card__prices">
+                                        <span class="travel-card__number">от 100 466 ₽</span>
+                                        <span class="travel-card__include-text">тур</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <img class="travel-card__image" src="img/header-background.jpg">
                         </article>
                     </div>
                 </li>
@@ -338,28 +333,26 @@
                 <li class="cards-section__card-wrapper col-12 row no-gutters">
                     <div class="col-12">
                         <article class="travel-card">
-                            <a href="#">
-                                <div class="travel-card__info-text">
-                                    <a href="#">
-                                        <span class="travel-card__country-name">Таиланд</span>
-                                        <h2 class="travel-card__name">Пхукет</h2>
-                                        <span class="travel-card__nights-count">7 ночей, на двоих</span>
-                                    </a>
-                                    <a href="#">
-                                        <div class="travel-card__prices">
-                                            <span class="travel-card__number">от 100 466 ₽</span>
-                                            <span class="travel-card__include-text">отель + перелёт</span>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="travel-card__prices">
-                                            <span class="travel-card__number">от 100 466 ₽</span>
-                                            <span class="travel-card__include-text">тур</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <img class="travel-card__image" src="img/header-background.jpg">
-                            </a>
+                            <div class="travel-card__info-text">
+                                <a href="#">
+                                    <span class="travel-card__country-name">Таиланд</span>
+                                    <h2 class="travel-card__name">Пхукет</h2>
+                                    <span class="travel-card__nights-count">7 ночей, на двоих</span>
+                                </a>
+                                <a href="#">
+                                    <div class="travel-card__prices">
+                                        <span class="travel-card__number">от 100 466 ₽</span>
+                                        <span class="travel-card__include-text">отель + перелёт</span>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="travel-card__prices">
+                                        <span class="travel-card__number">от 100 466 ₽</span>
+                                        <span class="travel-card__include-text">тур</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <img class="travel-card__image" src="img/header-background.jpg">
                         </article>
                     </div>
                 </li>
@@ -368,55 +361,51 @@
                     <div class="col-12 col-lg-12 h-50">
 
                         <article class="travel-card">
-                            <a href="#">
-                                <div class="travel-card__info-text">
-                                    <a href="#">
-                                        <span class="travel-card__country-name">Таиланд</span>
-                                        <h2 class="travel-card__name">Пхукет</h2>
-                                        <span class="travel-card__nights-count">7 ночей, на двоих</span>
-                                    </a>
-                                    <a href="#">
-                                        <div class="travel-card__prices">
-                                            <span class="travel-card__number">от 100 466 ₽</span>
-                                            <span class="travel-card__include-text">отель + перелёт</span>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="travel-card__prices">
-                                            <span class="travel-card__number">от 100 466 ₽</span>
-                                            <span class="travel-card__include-text">тур</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <img class="travel-card__image" src="img/header-background.jpg">
-                            </a>
+                            <div class="travel-card__info-text">
+                                <a href="#">
+                                    <span class="travel-card__country-name">Таиланд</span>
+                                    <h2 class="travel-card__name">Пхукет</h2>
+                                    <span class="travel-card__nights-count">7 ночей, на двоих</span>
+                                </a>
+                                <a href="#">
+                                    <div class="travel-card__prices">
+                                        <span class="travel-card__number">от 100 466 ₽</span>
+                                        <span class="travel-card__include-text">отель + перелёт</span>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="travel-card__prices">
+                                        <span class="travel-card__number">от 100 466 ₽</span>
+                                        <span class="travel-card__include-text">тур</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <img class="travel-card__image" src="img/header-background.jpg">
                         </article>
                     </div>
                     <div class="col-12 col-lg-12 h-50">
 
                         <article class="travel-card">
-                            <a href="#">
-                                <div class="travel-card__info-text">
-                                    <a href="#">
-                                        <span class="travel-card__country-name">Таиланд</span>
-                                        <h2 class="travel-card__name">Пхукет</h2>
-                                        <span class="travel-card__nights-count">7 ночей, на двоих</span>
-                                    </a>
-                                    <a href="#">
-                                        <div class="travel-card__prices">
-                                            <span class="travel-card__number">от 100 466 ₽</span>
-                                            <span class="travel-card__include-text">отель + перелёт</span>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="travel-card__prices">
-                                            <span class="travel-card__number">от 100 466 ₽</span>
-                                            <span class="travel-card__include-text">тур</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <img class="travel-card__image" src="img/header-background.jpg">
-                            </a>
+                            <div class="travel-card__info-text">
+                                <a href="#">
+                                    <span class="travel-card__country-name">Таиланд</span>
+                                    <h2 class="travel-card__name">Пхукет</h2>
+                                    <span class="travel-card__nights-count">7 ночей, на двоих</span>
+                                </a>
+                                <a href="#">
+                                    <div class="travel-card__prices">
+                                        <span class="travel-card__number">от 100 466 ₽</span>
+                                        <span class="travel-card__include-text">отель + перелёт</span>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="travel-card__prices">
+                                        <span class="travel-card__number">от 100 466 ₽</span>
+                                        <span class="travel-card__include-text">тур</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <img class="travel-card__image" src="img/header-background.jpg">
                         </article>
                     </div>
                 </li>
@@ -424,28 +413,26 @@
                 <li class="cards-section__card-wrapper col-lg-6 row no-gutters">
                     <div class="col-12">
                         <article class="travel-card">
-                            <a href="#">
-                                <div class="travel-card__info-text">
-                                    <a href="#">
-                                        <span class="travel-card__country-name">Таиланд</span>
-                                        <h2 class="travel-card__name">Пхукет</h2>
-                                        <span class="travel-card__nights-count">7 ночей, на двоих</span>
-                                    </a>
-                                    <a href="#">
-                                        <div class="travel-card__prices">
-                                            <span class="travel-card__number">от 100 466 ₽</span>
-                                            <span class="travel-card__include-text">отель + перелёт</span>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="travel-card__prices">
-                                            <span class="travel-card__number">от 100 466 ₽</span>
-                                            <span class="travel-card__include-text">тур</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <img class="travel-card__image" src="img/header-background.jpg">
-                            </a>
+                            <div class="travel-card__info-text">
+                                <a href="#">
+                                    <span class="travel-card__country-name">Таиланд</span>
+                                    <h2 class="travel-card__name">Пхукет</h2>
+                                    <span class="travel-card__nights-count">7 ночей, на двоих</span>
+                                </a>
+                                <a href="#">
+                                    <div class="travel-card__prices">
+                                        <span class="travel-card__number">от 100 466 ₽</span>
+                                        <span class="travel-card__include-text">отель + перелёт</span>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="travel-card__prices">
+                                        <span class="travel-card__number">от 100 466 ₽</span>
+                                        <span class="travel-card__include-text">тур</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <img class="travel-card__image" src="img/header-background.jpg">
                         </article>
                     </div>
                 </li>
@@ -453,28 +440,26 @@
                 <li class="cards-section__card-wrapper col-lg-3 row no-gutters">
                     <div class="col-12">
                         <article class="travel-card">
-                            <a href="#">
-                                <div class="travel-card__info-text">
-                                    <a href="#">
-                                        <span class="travel-card__country-name">Таиланд</span>
-                                        <h2 class="travel-card__name">Пхукет</h2>
-                                        <span class="travel-card__nights-count">7 ночей, на двоих</span>
-                                    </a>
-                                    <a href="#">
-                                        <div class="travel-card__prices">
-                                            <span class="travel-card__number">от 100 466 ₽</span>
-                                            <span class="travel-card__include-text">отель + перелёт</span>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="travel-card__prices">
-                                            <span class="travel-card__number">от 100 466 ₽</span>
-                                            <span class="travel-card__include-text">тур</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <img class="travel-card__image" src="img/header-background.jpg">
-                            </a>
+                            <div class="travel-card__info-text">
+                                <a href="#">
+                                    <span class="travel-card__country-name">Таиланд</span>
+                                    <h2 class="travel-card__name">Пхукет</h2>
+                                    <span class="travel-card__nights-count">7 ночей, на двоих</span>
+                                </a>
+                                <a href="#">
+                                    <div class="travel-card__prices">
+                                        <span class="travel-card__number">от 100 466 ₽</span>
+                                        <span class="travel-card__include-text">отель + перелёт</span>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="travel-card__prices">
+                                        <span class="travel-card__number">от 100 466 ₽</span>
+                                        <span class="travel-card__include-text">тур</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <img class="travel-card__image" src="img/header-background.jpg">
                         </article>
                     </div>
                 </li>
@@ -489,8 +474,7 @@
     <footer class="page-footer">
         <div class="container">
             <div class="row">
-                <ul class="page-footer__list col-md-3">
-                    <li class="page-footer__item">
+                <ul class="page-footer__list col-md-2">
                     <li class="page-footer__item">
                         <h2 class="page-footer__heading">Куда поехать</h2>
                     </li>
@@ -525,9 +509,9 @@
                     <li class="page-footer__item"><a href="">Крым</a></li>
                     <li class="page-footer__item"><a href="">Паттайя</a></li>
                 </ul>
-                <ul class="page-footer__list col-md-3">
+                <ul class="page-footer__list col-md-4">
                     <li class="page-footer__item">
-                        <h2 class="page-footer__heading"><a href="">Популярные отели</a></h2>
+                        <h2 class="page-footer__heading">Популярные отели</h2>
                     </li>
                     <li class="page-footer__item"><a href="">ОК Сочи Парк Отель (Бывш. Azimut Hotel Sochi)</a></li>
                     <li class="page-footer__item"><a href="">Green Park Ялта - Интурист (Бывш. Пансионат Донбасс) 3*</a></li>

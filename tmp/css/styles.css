@@ -3256,13 +3256,19 @@ template
     border-top-left-radius: 0 !important;
     border-bottom-left-radius: 0 !important;
 }
+.main-navbar__submit-button::before,
+.main-navbar__submit-button::after
+{
+    display: none !important;
+}
 .main-navbar__form
 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
 }
-.main-navbar__form > *:first-child
+.main-navbar__form > *:first-child,
+.main-navbar__form > *:first-child > *:first-child
 {
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
@@ -3272,18 +3278,16 @@ template
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
 }
-.main-navbar__dropdown,
-.main-navbar__travel-direction
+.main-navbar form > *
 {
     position: relative;
 }
-.main-navbar__dropdown::after,
-.main-navbar__travel-direction::after
+.main-navbar form > *::after,
+.main-navbar form > *::before
 {
     position: absolute;
     z-index: 2;
     top: 15%;
-    right: 0;
 
     display: block;
 
@@ -3291,13 +3295,21 @@ template
     height: 70%;
 
     content: '';
-    -webkit-transition: height .3s ease-in-out,    top .3s ease-in-out;
-            transition: height .3s ease-in-out,    top .3s ease-in-out; 
+    -webkit-transition: height .15s ease-in-out,    top .15s ease-in-out;
+            transition: height .15s ease-in-out,    top .15s ease-in-out; 
 
     background-color: #999;
 }
-.main-navbar__dropdown:hover::after,
-.main-navbar__travel-direction:hover::after
+.main-navbar form > *::before
+{
+    left: 0;
+}
+.main-navbar form > *::after
+{
+    right: -1px;
+}
+.main-navbar form > *:hover::after,
+.main-navbar form > *:hover::before
 {
     top: 0;
 
@@ -3317,9 +3329,17 @@ template
 {
     width: 320px;
 }
+.main-navbar__travel-direction::before
+{
+    display: none;
+}
 .main-navbar__travel-city
 {
     width: 230px;
+}
+.main-navbar__travel-city::after
+{
+    display: none !important;
 }
 .main-navbar input
 {
@@ -3509,7 +3529,7 @@ body
     -webkit-transition-delay: .3s;
             transition-delay: .3s;
 
-    opacity: .3;
+    opacity: .5;
     background-color: black;
 }
 
@@ -3523,7 +3543,12 @@ body
 input:focus,
 button:focus
 {
-    outline: 3px solid #ffdb4d;
+    outline: 2px solid #ffdb4d;
+}
+
+input
+{
+    outline-offset: -2px;
 }
 
 .page-header
@@ -3572,10 +3597,17 @@ button:focus
     width: 30px;
     height: 30px;
 
-    border: 1px solid white;
-    border-radius: 3px; 
+    -webkit-transition: border-color .15s ease-in-out;
+            transition: border-color .15s ease-in-out; 
+
+    border: 1px solid gray;
+    border-radius: 3px;
     background: url('../img/user__enter.svg') no-repeat center;
     background-size: 20px 15px;
+}
+.page-nav__enter-link:hover
+{
+    border-color: white;
 }
 
 .main-nav
@@ -3592,12 +3624,18 @@ button:focus
 
     margin-right: 30px;
 
+    -webkit-transition: color .15s ease-out;
+            transition: color .15s ease-out; 
     text-align: center;
 }
 .main-nav__item--active
 {
     border-top: 3px solid transparent;
     border-bottom: 3px solid rgba(255, 255, 255, .8);
+}
+.main-nav__item:hover
+{
+    color: white;
 }
 
 .travel-card
@@ -3865,6 +3903,55 @@ button:focus
 {
     font-weight: bold;
 }
+.login-window__social-list
+{
+    margin-right: auto; 
+    margin-left: auto;
+}
+
+.social-list
+{
+    margin: 0; 
+    padding: 0;
+
+    list-style: none;
+}
+.social-list a
+{
+    opacity: 0;
+}
+.social-list__item
+{
+    width: 24px;
+    height: 24px;
+
+    background-repeat: no-repeat; 
+    background-position: center;
+}
+.social-list__item__vk
+{
+    background-image: url('../img/login-menu/social-list/auth__social-icon_code_vk.svg');
+}
+.social-list__item__vk:hover
+{
+    background-image: url('../img/login-menu/social-list/auth__social-icon_code_vk-hover.svg');
+}
+.social-list__item__fb
+{
+    background-image: url('../img/login-menu/social-list/auth__social-icon_code_fb.svg');
+}
+.social-list__item__fb:hover
+{
+    background-image: url('../img/login-menu/social-list/auth__social-icon_code_fb-hover.svg');
+}
+.social-list__item__fb
+{
+    background-image: url('../img/login-menu/social-list/auth__social-icon_code_tw.svg');
+}
+.social-list__item__fb:hover
+{
+    background-image: url('../img/login-menu/social-list/auth__social-icon_code_tw-hover.svg');
+}
 
 .travel-menu
 {
@@ -3882,9 +3969,11 @@ button:focus
 {
     height: 120px;
 
+    -webkit-transition: background-color .15s ease-out;
+            transition: background-color .15s ease-out; 
     text-align: center;
 
-    opacity: .7; 
+    opacity: .7;
     background-repeat: no-repeat;
     background-position: center 30px;
     background-size: 35px;
@@ -3951,6 +4040,15 @@ button:focus
 
     list-style: none;
     list-style: none;
+}
+.page-footer__list a
+{
+    -webkit-transition: color .15s ease-out;
+            transition: color .15s ease-out;
+}
+.page-footer__list a:hover
+{
+    color: red !important;
 }
 
 .page-footer__item

@@ -35,6 +35,11 @@ $height-content:42px;
      border-bottom-left-radius: 0 !important;
      width: $width-submit-button;
      border: none !important;
+
+     &::before,
+     &::after {
+       display: none !important;
+     }
    }
 
    &__form {
@@ -53,8 +58,7 @@ $height-content:42px;
      }
    }
 
-  &__dropdown,
-  &__travel-direction {
+  form > * {
     position: relative;
 
     &::after,
@@ -103,6 +107,9 @@ $height-content:42px;
 
    &__travel-city {
      width: $width-travel-city;
+     &::after {
+       display: none !important;
+     }
    }
 
    input {
