@@ -133,7 +133,7 @@ $background: linear-gradient(to bottom, #e6eeff, #dde8ff);
   @include resetDefaultStylesList;
 
   a {
-    opacity: 0;
+    color: transparent;
   }
 
   &__item {
