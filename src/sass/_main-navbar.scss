@@ -50,8 +50,8 @@ $height-content:42px;
      {
          border-top-left-radius: 3px;
          border-bottom-left-radius: 3px;
-         &::before,
-         &::after {
+         &::before
+         {
            display: none;
          }
      }

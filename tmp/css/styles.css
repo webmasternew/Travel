@@ -3274,9 +3274,7 @@ template
     border-bottom-left-radius: 3px;
 }
 .main-navbar__form > *:first-child::before,
-.main-navbar__form > *:first-child::after,
-.main-navbar__form > *:first-child > *:first-child::before,
-.main-navbar__form > *:first-child > *:first-child::after
+.main-navbar__form > *:first-child > *:first-child::before
 {
     display: none;
 }
