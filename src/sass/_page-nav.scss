@@ -7,7 +7,6 @@
   top:0;
   left: 0;
   width: 100%;
-
   color: $font-color-gray;
   z-index: 2;
 
@@ -32,11 +31,14 @@
   display: block;
   width: 30px;
   height: 30px;
-
   background: url("../img/user__enter.svg") no-repeat center;
   background-size: 20px 15px;
-  border: 1px solid rgba(255,255,255,255.2);
+  border: 1px solid gray;
   border-radius: 3px;
+  transition: border-color 0.15s ease-in-out;
+  &:hover {
+    border-color: white;
+  }
 }
 
 .main-nav {
@@ -49,9 +51,13 @@
       font-size: 18px;
       line-height: 70px;
       text-align: center;
+      transition: color .15s ease-out;
       &--active {
         border-top: 3px solid transparent;
         border-bottom:3px solid $font-color-gray;
+      }
+      &:hover {
+        color: white;
       }
     }
 

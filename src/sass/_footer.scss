@@ -10,6 +10,13 @@
   @include resetDefaultStylesList;
   padding-left: 20px;
   list-style: none;
+
+  a {
+    transition: color .15s ease-out;
+    &:hover {
+      color: red !important;
+    }
+  }
 }
 
 .page-footer__item {

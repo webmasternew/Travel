@@ -40,9 +40,11 @@ $height-content:42px;
    &__form {
      display: flex;
 
-     > *:first-child {
-       border-top-left-radius: 3px;
-       border-bottom-left-radius: 3px;
+     > *:first-child,
+     > *:first-child > *:first-child
+     {
+         border-top-left-radius: 3px;
+         border-bottom-left-radius: 3px;
      }
 
      > *:last-child {
@@ -55,21 +57,32 @@ $height-content:42px;
   &__travel-direction {
     position: relative;
 
-    &::after {
+    &::after,
+    &::before
+    {
       content: "";
       z-index: 2;
       display: block;
       position: absolute;
       top: 15%;
-      right: 0;
       height: 70%;
       width: 1px;
       background-color: #999999;
-      transition: height .3s ease-in-out,
-                  top .3s ease-in-out;
+      transition: height .15s ease-in-out,
+                  top .15s ease-in-out;
     }
 
-    &:hover::after {
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: -1px;
+    }
+
+    &:hover::after,
+    &:hover::before
+    {
       top:0;
       height: 100%;
     }
@@ -83,6 +96,9 @@ $height-content:42px;
 
     &__travel-direction {
       width: $width-travel-direction;
+      &::before {
+        display: none;
+      }
     }
 
    &__travel-city {
