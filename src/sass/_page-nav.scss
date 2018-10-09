@@ -11,7 +11,7 @@
   color: $font-color-gray;
   z-index: 2;
 
-  @media(max-width: map_get($grid-breakpoints,'sm')) {
+  @media(max-width: map_get($grid-breakpoints,'xs')) {
     position: relative;
   }
 

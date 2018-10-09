@@ -58,7 +58,7 @@ html
 {
     .container
     {
-        max-width: 1140px;
+        max-width: 1240px;
     }
 }
 
@@ -7052,9 +7052,6 @@ a.text-blood:focus
     .main-navbar
     {
         position: relative;
-        top: 0; 
-
-        display: none;
     }
     .main-navbar__form
     {
@@ -7391,6 +7388,14 @@ input
     margin: -1px;
 }
 
+@media (min-width: 1640px)
+{
+    .container-big
+    {
+        max-width: 1440px;
+    }
+}
+
 .page-header
 {
     position: relative;
@@ -7412,7 +7417,7 @@ input
     color: rgba(255, 255, 255, .8);
     border-bottom: 1px solid rgba(255, 255, 255, .8);
 }
-@media (max-width: 576px)
+@media (max-width: 0)
 {
     .page-nav
     {
@@ -7564,7 +7569,7 @@ input
 .page-header .travel-card
 {
     height: 500px;
-    padding-top: 200px;
+    padding-top: 230px;
 
     text-align: center;
 
