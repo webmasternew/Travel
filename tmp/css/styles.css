@@ -3661,6 +3661,7 @@ input
     overflow: hidden;
 
     height: 100%;
+    min-height: 260px; 
 
     color: rgba(255, 255, 255, .8);
     border: 1px solid rgba(255, 255, 255, .4);
@@ -3729,7 +3730,7 @@ input
 }
 .travel-card--big
 {
-    height: 460px;
+    height: 520px;
 }
 
 .page-header .travel-card
@@ -3763,9 +3764,7 @@ input
 
 .cards-section__card-wrapper
 {
-    overflow: hidden; 
-
-    height: 460px;
+    overflow: hidden;
 }
 
 .login-window
@@ -4066,6 +4065,13 @@ input
 .page-footer__list a:hover
 {
     color: red !important;
+}
+@media (max-width: 768px)
+{
+    .page-footer__list
+    {
+        text-align: center;
+    }
 }
 
 .page-footer__item

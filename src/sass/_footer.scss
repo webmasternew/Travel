@@ -1,3 +1,4 @@
+@import "../bootstrap/scss/variables";
 @import "variables";
 @import "mixins";
 
@@ -16,6 +17,10 @@
     &:hover {
       color: red !important;
     }
+  }
+
+  @media (max-width: map_get($grid-breakpoints,'md')) {
+        text-align: center;
   }
 }
 
