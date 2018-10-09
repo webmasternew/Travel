@@ -19,6 +19,7 @@ $height-content:42px;
 
     @media(max-width: map_get($grid-breakpoints,"lg")) {
       position: relative;
+      display: none;
       &__form {
         flex-direction: column;
       }

@@ -7052,6 +7052,8 @@ a.text-blood:focus
     .main-navbar
     {
         position: relative;
+
+        display: none;
     }
     .main-navbar__form
     {
@@ -7388,7 +7390,7 @@ input
     margin: -1px;
 }
 
-@media (min-width: 1640px)
+@media (min-width: 1540px)
 {
     .container-big
     {
