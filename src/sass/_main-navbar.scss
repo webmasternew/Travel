@@ -8,22 +8,39 @@ $width-submit-button: 100px;
 $height-content:42px;
 
 .main-navbar {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 120px;
-    z-index: 11;
-    font-size: 18px;
-    line-height: $height-content;
-    height: $height-content;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 120px;
+  z-index: 11;
+  font-size: 18px;
+  line-height: 40px;
 
-    @media(max-width: map_get($grid-breakpoints,"lg")) {
-      position: relative;
-      display: none;
-      &__form {
-        flex-direction: column;
-      }
+
+  @media(max-width: map_get($grid-breakpoints,"lg")) {
+    position: relative;
+    top: 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    &__form {
+      flex-wrap: wrap;
+      justify-content: center;
     }
+  }
+
+  @media(max-width: map_get($grid-breakpoints,"sm")) {
+    margin-top: 0;
+    margin-bottom: 0;
+   form > * {
+     width: 100%;
+   }
+    input {
+      text-align: center;
+    }
+    &__travel-direction {
+      font-size: 17px;
+    }
+  }
 
   &__dropdown-content {
     display: none;
@@ -31,43 +48,44 @@ $height-content:42px;
     position: absolute;
     left: 0;
     top: $height-content + 15px;
+    z-index: 12;
   }
 
-   &__submit-button {
-     border-top-left-radius: 0 !important;
-     border-bottom-left-radius: 0 !important;
-     width: $width-submit-button;
-     border: none !important;
+  &__submit-button {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    width: $width-submit-button;
+    border: none !important;
 
-     &::before,
-     &::after {
-       display: none !important;
-     }
-   }
+    &::before,
+    &::after {
+      display: none !important;
+    }
+  }
 
-   &__form {
-     display: flex;
+  &__form {
+    display: flex;
 
-     > *:first-child,
-     > *:first-child > *:first-child
-     {
-         border-top-left-radius: 3px;
-         border-bottom-left-radius: 3px;
-         &::before
-         {
-           display: none;
-         }
-     }
+    > *:first-child,
+    > *:first-child > *:first-child
+    {
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+      &::before
+      {
+        display: none;
+      }
+    }
 
-     > *:last-child {
-       border-top-right-radius: 3px;
-       border-bottom-right-radius: 3px;
-       &::before,
-       &::after {
-         display: none;
-       }
-     }
-   }
+    > *:last-child {
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
 
   form > * {
     position: relative;
@@ -84,7 +102,7 @@ $height-content:42px;
       width: 1px;
       background-color: #999999;
       transition: height .15s ease-in-out,
-                  top .15s ease-in-out;
+      top .15s ease-in-out;
     }
 
     &::before {
@@ -103,29 +121,29 @@ $height-content:42px;
     }
   }
 
-   &__dropdown {
-     width: auto;
-     position: relative;
-   }
+  &__dropdown {
+    width: auto;
+    position: relative;
+  }
 
-    &__travel-direction {
-      width: $width-travel-direction;
+  &__travel-direction {
+    width: $width-travel-direction;
+  }
+
+  &__travel-city {
+    width: $width-travel-city;
+    &::after
+    {
+      display: none !important;
     }
+  }
 
-   &__travel-city {
-     width: $width-travel-city;
-     &::after
-     {
-       display: none !important;
-     }
-   }
-
-   input {
-     width: 100%;
-     border: none;
-     border-radius: 0;
-     padding: 0 12px;
-   }
+  input {
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    padding: 0 12px;
+  }
 
   &__icon {
     position: absolute;
@@ -144,7 +162,7 @@ $height-content:42px;
       width: 19px;
       background: url("../img/icon-2.svg") center no-repeat;
       transition: opacity .3s ease-in-out,
-                transform .3s ease-in-out;
+      transform .3s ease-in-out;
     ;
     }
   }
